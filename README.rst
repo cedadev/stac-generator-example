@@ -35,7 +35,7 @@ Asset Extractor
 
 The asset-extractor outputs a single dict:
 
-.. code-block:: json
+.. code-block:: python
 
     {
         'id': 'c4b8f1578ed806f080f62470ebce2dcd',
@@ -55,7 +55,7 @@ The item-generator outputs two dicts:
 
 The first one is the item metadata, containing the extracted properties.
 
-.. code-block:: json
+.. code-block:: python
 
 
     {
@@ -81,7 +81,7 @@ The first one is the item metadata, containing the extracted properties.
 The second one outputs an asset object which will allow downstream applications
 to associate assets with a particular item.
 
-.. code-block:: json
+.. code-block:: python
 
     {
         'id': '4dfbda18d335385742738fad6314450d',
