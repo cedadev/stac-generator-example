@@ -2,12 +2,23 @@
 Asset-Scanner Example
 **********************
 
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD?filepath=example_notebook.ipynb
+
 This repo serves as a basic example to provide a working introduction to the
 `asset-scanner`_ framework. It uses an intake catalog to provide URLs to public
 data in an S3 Object Store. These are then turned into STAC Assets and STAC Items.
 
 Getting Started
 ================
+
+You can either run locally or launch in Binder:
+
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD?filepath=example_notebook.ipynb
+
+Local deployment
+-----------------
 
 1. Install the requirements
 
