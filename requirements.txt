@@ -1,30 +1,30 @@
 anytree==2.8.0
 appdirs==1.4.4
 asciitree==0.3.3
--e git+https://github.com/cedadev/asset-extractor.git@3e00eb9efc15aeae20b65eb2e0f0a52fc7d9d0de#egg=asset_extractor
--e git+https://github.com/cedadev/asset-scanner.git@912633754a24666a23fb89bfedc147e9ff4aa8bd#egg=asset_scanner
+git+https://github.com/cedadev/asset-extractor
+git+https://github.com/cedadev/asset-scanner
 bokeh==2.4.0
-boto3==1.18.46
-botocore==1.21.46
+boto3==1.18.49
+botocore==1.21.49
 certifi==2021.5.30
-cftime==1.5.0
+cftime==1.5.1
 charset-normalizer==2.0.6
 click==8.0.1
 cloudpickle==2.0.0
 dask==2021.9.1
-directory-tree==0.1.0
+https://github.com/cedadev/directory-tree
 distributed==2021.9.1
 entrypoints==0.3
 fasteners==0.16.3
 fastprogress==1.0.0
-fsspec==2021.8.1
+fsspec==2021.9.0
 h5netcdf==0.11.0
 h5py==3.4.0
 HeapDict==1.0.1
 idna==3.2
 intake==0.6.3
 intake-esm==2021.8.17
--e git+https://github.com/cedadev/item-generator.git@089ec470662baf236bf03e408435bfed22584675#egg=item_generator
+git+https://github.com/cedadev/item-generator
 Jinja2==3.0.1
 jmespath==0.10.0
 locket==0.2.1
