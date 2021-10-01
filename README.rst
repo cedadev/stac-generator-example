@@ -3,7 +3,7 @@ Asset-Scanner Example
 **********************
 
 .. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD?filepath=example_notebook.ipynb
+ :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD
 
 This repo serves as a basic example to provide a working introduction to the
 `asset-scanner`_ framework. It uses an intake catalog to provide URLs to public
@@ -15,7 +15,7 @@ Getting Started
 You can either run locally or launch in Binder:
 
 .. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD?filepath=example_notebook.ipynb
+ :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD
 
 Local deployment
 -----------------
