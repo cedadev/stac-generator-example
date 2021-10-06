@@ -13,9 +13,6 @@ Getting Started
 ================
 
 You can either run locally or launch in Binder:
-
-.. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD
  
 Running in Binder
 -----------------
