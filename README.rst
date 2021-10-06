@@ -16,6 +16,17 @@ You can either run locally or launch in Binder:
 
 .. image:: https://mybinder.org/badge_logo.svg
  :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD
+ 
+Running in Binder
+-----------------
+
+Click 
+
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD
+
+To just run it and see the example output, open ``example_notebook.ipynb``.
+
 
 Local deployment
 -----------------
@@ -37,6 +48,33 @@ Local deployment
     .. code-block::
 
         asset-scanner conf/extract-items.yaml
+        
+Inputs Explained
+================
+
+The yaml files in conf setup the input and outputs for the script. In this case, the input is an intake-esm catalog and the output is the terminal.
+
+The file in item-descriptions, describes the workflow to extract the facets.
+
+.. code-block:: yaml
+
+    datasets:
+        - /CMIP6.CMIP.MOHC.UKESM1-0-LL
+    facets:
+        extraction_methods:
+            -   name: regex
+                description: "Extract facets from path using regex"
+                inputs:
+                    regex: '\/(?P<mip_era>\w+)\.(?P<activity_id>\w+)\.(?P<institution_id>[\w-]+)\.(?P<source_id>[\w-]+)\/(?P<experiment_id>[\w-]+)\.(?P<member_id>\w+)\.(?P<table_id>\w+)\.(?P<variable_id>\w+)\.(?P<grid_label>\w+)\.(?P<version>\w+)'
+        aggregation_facets:
+            - mip_era
+            - activity_id
+            - institution_id
+            - source_id
+            - table_id
+            - var_id
+            - version
+
 
 Outputs Explained
 ==================
