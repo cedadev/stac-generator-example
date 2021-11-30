@@ -1,4 +1,4 @@
-extractor: asset_extractor.AssetExtractor
+extractor: asset_generator.AssetExtractor
 item_descriptions:
   root_directory: item_descriptions
 inputs:
