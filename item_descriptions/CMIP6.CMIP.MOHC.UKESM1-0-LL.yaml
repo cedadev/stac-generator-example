@@ -1,5 +1,5 @@
 datasets:
-    - /CMIP6.CMIP.MOHC.UKESM1-0-LL
+  - https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL
 facets:
     extraction_methods:
         -   name: regex
