@@ -38,13 +38,13 @@ Local deployment
 
     .. code-block::
 
-        asset-scanner conf/extract-assets.yaml
+        asset_scanner conf/extract-assets.yaml
 
 3. Run the `item-generator`_
 
     .. code-block::
 
-        asset-scanner conf/extract-items.yaml
+        asset_scanner conf/extract-items.yaml
         
 Inputs Explained
 ================
