@@ -1,0 +1,16 @@
+datasets:
+  - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/fileServer/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37/allrcps_ensemble_stats/YS
+facets:
+  extraction_methods:
+    - name: regex
+      description: "Extract facets from path using regex"
+      inputs:
+        regex: 'https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/fileServer/birdhouse/cccs_portal/indices/Final/BCCAQv2/(?P<var_id>\w+)/allrcps_ensemble_stats/YS'
+  aggregation_facets:
+    - mip_era
+    - activity_id
+    - institution_id
+    - source_id
+    - table_id
+    - var_id
+    - version
