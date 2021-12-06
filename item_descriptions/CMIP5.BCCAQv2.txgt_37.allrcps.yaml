@@ -1,16 +1,32 @@
 datasets:
-  - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/fileServer/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37/allrcps_ensemble_stats/YS
+  - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37/allrcps_ensemble_stats/YS
 facets:
   extraction_methods:
     - name: regex
       description: "Extract facets from path using regex"
       inputs:
-        regex: 'https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/fileServer/birdhouse/cccs_portal/indices/Final/BCCAQv2/(?P<var_id>\w+)/allrcps_ensemble_stats/YS'
+        regex: 'https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/BCCAQv2/(?P<variable_id>\w+)/allrcps_ensemble_stats/YS'
+    - name: header_extract
+      inputs:
+        attributes:
+          - institute_id
+          - Conventions
+          - creation_date
+          - frequency
+          - product
+          - modeling_realm
+          - project_id
+          - downscaling_method_id
+          - driving_experiment
+          - driving_model_id
+          - target_institute_id
   aggregation_facets:
-    - mip_era
-    - activity_id
-    - institution_id
-    - source_id
-    - table_id
-    - var_id
-    - version
+    - project_id
+    - downscaling_method_id
+    - institute_id
+    - variable_id
+    - frequency
+    - modeling_realm
+templates:
+  title_template: "$project_id,$downscaling_method_id,$institute_id,$variable_id,$frequency,$modeling_realm"
+  description_template: "This is a STAC item from the $project_id project, from the $institute_id institute, part of the $downscaling_method_id model and $variable_id variable"
