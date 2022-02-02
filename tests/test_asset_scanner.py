@@ -1,5 +1,6 @@
 import ast
 import os
+import json
 
 from asset_scanner.scripts import asset_scanner
 
@@ -8,8 +9,16 @@ cwd = os.getcwd()
 if cwd.split('/')[-1] == 'tests':
     os.chdir('..')
 
+# delete all files in the test/file-io directory for fresh test instance
+io_dir = os.path.join('tests', 'file-io')
+for file in os.listdir(io_dir):
+    os.remove(os.path.join(io_dir, file))
+    
+# get the config files for the generators    
 extract_assets_conf = os.path.join('conf', 'extract-assets.yaml')
 extract_items_conf = os.path.join('conf', 'extract-items.yaml')
+extract_collections_conf = os.path.join('conf', 'extract-collections.yaml')
+
 
 
 def asset_scanner_extractor(config):
@@ -29,14 +38,15 @@ def asset_scanner_extractor(config):
 
 def test_extract_assets(capsys):
     """
-    Test if the extract has a non-empty body
+    Test if the extract has a non-empty properties
     """
     asset_scanner_extractor(extract_assets_conf)
-    out, err = capsys.readouterr()
-    output = out.split('\n')
-    extract = ast.literal_eval(output[0])
+    output_dir = os.path.join('tests', 'file-io', 'assets.json')
 
-    assert extract['body']
+    with open(output_dir, 'r+') as file:
+        data = json.load(file)
+
+    assert data['body']['properties']
 
 
 def test_extract_items(capsys):
@@ -44,21 +54,34 @@ def test_extract_items(capsys):
     Test if the extract has non-empty properties
     """
     asset_scanner_extractor(extract_items_conf)
-    out, err = capsys.readouterr()
-    output = out.split('\n')
-    extract = ast.literal_eval(output[0])
+    output_dir = os.path.join('tests', 'file-io', 'items.json')
 
-    assert extract['body']['properties']
+    with open(output_dir, 'r+') as file:
+        data = json.load(file)
 
+    assert data['body']['properties']
 
-def test_id_generation(capsys):
+def test_extract_collections(capsys):
     """
-    Test the item_id and file_id are separate ids
+    Test if the collections has non-empty summaries
     """
-    asset_scanner_extractor(extract_items_conf)
-    out, err = capsys.readouterr()
-    output = out.split('\n')
-    item = ast.literal_eval(output[0])
-    file = ast.literal_eval(output[1])
+    asset_scanner_extractor(extract_collections_conf)
+    output_dir = os.path.join('tests', 'file-io', 'collections.json')
 
-    assert item['id'] != file['id']
+    with open(output_dir, 'r+') as file:
+        data = json.load(file)
+
+    assert data['body']['properties']['summaries']
+
+# What was the reason for this test?
+# def test_id_generation(capsys):
+#     """
+#     Test the item_id and file_id are separate ids
+#     """
+#     asset_scanner_extractor(extract_items_conf)
+#     out, err = capsys.readouterr()
+#     output = out.split('\n')
+#     item = ast.literal_eval(output[0])
+#     file = ast.literal_eval(output[1])
+
+#     assert item['id'] != file['id']

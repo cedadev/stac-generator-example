@@ -1,6 +1,6 @@
 extractor: asset_generator.AssetExtractor
 item_descriptions:
-  root_directory: item_descriptions
+  root_directory: item_descriptions/
 inputs:
   - name: intake_esm
     uri: https://raw.githubusercontent.com/cedadev/cmip6-object-store/master/catalogs/ceda-zarr-cmip6.json
@@ -18,5 +18,12 @@ inputs:
         variable_id: tas
 outputs:
   - name: standard_out
-logging:
-    level: INFO
+    namespace: asset
+  - name: json_out
+    namespace: asset
+    filepath: tests/file-io/assets.json
+  - name: file_out
+    namespace: header
+    filepath: tests/file-io/assets.txt
+
+
