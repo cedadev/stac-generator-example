@@ -1,7 +1,7 @@
-import ast
-import os
 import json
+import os
 
+import pytest
 from asset_scanner.scripts import asset_scanner
 
 # debug purposes: switch to root directory if run as script
@@ -36,7 +36,7 @@ def asset_scanner_extractor(config):
         input.run(extractor)
 
 
-def test_extract_assets(capsys):
+def test_extract_assets():
     """
     Test if the extract has a non-empty properties
     """
@@ -46,10 +46,10 @@ def test_extract_assets(capsys):
     with open(output_dir, 'r+') as file:
         data = json.load(file)
 
-    assert data['body']['properties']
+    assert data[0]['body']['properties']
 
 
-def test_extract_items(capsys):
+def test_extract_items():
     """
     Test if the extract has non-empty properties
     """
@@ -59,9 +59,10 @@ def test_extract_items(capsys):
     with open(output_dir, 'r+') as file:
         data = json.load(file)
 
-    assert data['body']['properties']
+    assert data[0]['body']['properties']
 
-def test_extract_collections(capsys):
+
+def test_extract_collections():
     """
     Test if the collections has non-empty summaries
     """
@@ -71,7 +72,7 @@ def test_extract_collections(capsys):
     with open(output_dir, 'r+') as file:
         data = json.load(file)
 
-    assert data['body']['properties']['summaries']
+    assert data[0]['body']['summaries']
 
 # What was the reason for this test?
 # def test_id_generation(capsys):
