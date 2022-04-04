@@ -1,7 +1,7 @@
-git+https://github.com/cedadev/asset-scanner@a1b9232
-git+https://github.com/cedadev/asset-generator@5b3b196
-git+https://github.com/cedadev/item-generator@0654b6c
-git+https://github.com/cedadev/collection-generator@a6af426
+git+https://github.com/cedadev/asset-scanner@26f3cc9
+git+https://github.com/cedadev/asset-generator@efca1c5
+git+https://github.com/cedadev/item-generator@b1b5d14
+git+https://github.com/cedadev/collection-generator@0a160e3
 anytree==2.8.0
 appdirs==1.4.4
 asciitree==0.3.3
