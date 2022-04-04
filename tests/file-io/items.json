@@ -1,0 +1,82 @@
+[
+    {
+        "id": "f4a0ee129eabd03a1a412e8a463f52ae",
+        "body": {
+            "item_id": "f4a0ee129eabd03a1a412e8a463f52ae",
+            "type": "item",
+            "collection_id": "cmip6",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20191210"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "experiment_id": [
+                    "historical"
+                ],
+                "member_id": [
+                    "r12i1p1f2"
+                ],
+                "grid_label": [
+                    "gn"
+                ]
+            }
+        }
+    },
+    {
+        "id": "f8dd8208e2fdb8cdcb582126e3007041",
+        "body": {
+            "item_id": "f8dd8208e2fdb8cdcb582126e3007041",
+            "type": "item",
+            "collection_id": "cmip6",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20190502"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "experiment_id": [
+                    "historical"
+                ],
+                "member_id": [
+                    "r4i1p1f2"
+                ],
+                "grid_label": [
+                    "gn"
+                ]
+            }
+        }
+    }
+]
