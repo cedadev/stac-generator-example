@@ -1,4 +1,4 @@
-git+https://github.com/cedadev/asset-scanner@26f3cc9
+git+https://github.com/cedadev/asset-scanner@bb0a9e0
 git+https://github.com/cedadev/asset-generator@efca1c5
 git+https://github.com/cedadev/item-generator@b1b5d14
 git+https://github.com/cedadev/collection-generator@0a160e3
