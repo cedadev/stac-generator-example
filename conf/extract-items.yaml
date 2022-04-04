@@ -1,4 +1,5 @@
 extractor: item_generator.FacetExtractor
+header_deduplication: true
 item_descriptions:
     root_directory: item_descriptions/
 aggregator:

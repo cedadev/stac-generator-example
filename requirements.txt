@@ -1,8 +1,10 @@
+git+https://github.com/cedadev/asset-scanner@a1b9232
+git+https://github.com/cedadev/asset-generator@5b3b196
+git+https://github.com/cedadev/item-generator@0654b6c
+git+https://github.com/cedadev/collection-generator@a6af426
 anytree==2.8.0
 appdirs==1.4.4
 asciitree==0.3.3
-git+https://github.com/cedadev/asset-generator@315f9f3
-asset-scanner==1.0.1
 bokeh==2.4.0
 boto3==1.18.49
 botocore==1.21.49
@@ -24,7 +26,6 @@ HeapDict==1.0.1
 idna==3.2
 intake==0.6.3
 intake-esm==2021.8.17
-git+https://github.com/cedadev/item-generator@0e1f1d3
 Jinja2==3.0.1
 jmespath==0.10.0
 locket==0.2.1
