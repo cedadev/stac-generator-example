@@ -4,6 +4,8 @@ Asset-Scanner Example
 
 .. image:: https://mybinder.org/badge_logo.svg
  :target: https://mybinder.org/v2/gh/cedadev/asset-scanner-example/HEAD
+.. image:: https://github.com/cedadev/asset-scanner-example/actions/workflows/tests.yaml/badge.svg
+ :target: https://github.com/cedadev/asset-scanner-example/actions/workflows/tests.yaml
 
 This repo serves as a basic example to provide a working introduction to the
 `asset-scanner`_ framework. It uses an intake catalog to provide URLs to public

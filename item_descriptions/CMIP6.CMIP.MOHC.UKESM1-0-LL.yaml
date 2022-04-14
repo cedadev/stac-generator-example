@@ -1,4 +1,4 @@
-datasets:
+paths:
   - https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL
 facets:
   extraction_methods:
@@ -14,6 +14,6 @@ facets:
     - table_id
     - var_id
     - version
-templates:
-  title_template: "$mip_era.$activity_id.$institution_id.$source_id.$table_id.$var_id.$version"
-  description_template: "This is a STAC item from the $mip_era project, from the $institution_id institute, part of the $activity_id model and $experiment_id experiment"
+  templates:
+    title_template: "$mip_era.$activity_id.$institution_id.$source_id.$table_id.$var_id.$version"
+    description_template: "This is a STAC item from the $mip_era project, from the $institution_id institute, part of the $activity_id model and $experiment_id experiment"
