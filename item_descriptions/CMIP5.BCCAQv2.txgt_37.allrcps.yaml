@@ -1,4 +1,4 @@
-datasets:
+paths:
   - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37
 facets:
   extraction_methods:
