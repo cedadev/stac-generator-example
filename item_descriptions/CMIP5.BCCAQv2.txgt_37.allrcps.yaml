@@ -1,5 +1,7 @@
 paths:
   - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37
+collections:
+  id: test123
 facets:
   extraction_methods:
     - name: regex
@@ -10,7 +12,7 @@ facets:
       inputs:
         attributes:
           - institute_id
-          - Conventions
+          - conventions
           - creation_date
           - frequency
           - product

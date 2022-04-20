@@ -3,7 +3,7 @@ item_descriptions:
   root_directory: item_descriptions
 inputs:
   - name: thredds
-    uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37/YS/catalog.xml
+    uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37/catalog.xml
     object_path_attr: access_urls.OPENDAP
 #outputs:
 #  - name: standard_out
@@ -12,6 +12,7 @@ outputs:
     connection:
       host: http://127.0.0.1/stac
     collection:
-      name: cmip5
+      name: CMIP5
+      description: The WCRP Coupled Model Intercomparison Project, Phase 5 (CMIP5), was a global climate model intercomparison project, coordinated by PCMDI (Program For Climate Model Diagnosis and Intercomparison) on behalf of the World Climate Research Program (WCRP) and provided input for the Intergovernmental Panel on Climate Change (IPCC) 5th Assessment Report (AR5).The CMIP5 archive is managed via the Earth System Grid Federation, a globally distributed archive, with various gateways with advanced faceted search capabilities provided by a number of participating organisations. Full details are available from the PCMDI CMIP5 pages (see linked documentation on this record).
 logging:
     level: INFO
