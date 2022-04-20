@@ -21,12 +21,14 @@ facets:
           - driving_model_id
           - target_institute_id
   aggregation_facets:
-    - project_id
-    - downscaling_method_id
-    - institute_id
-    - variable_id
-    - frequency
-    - modeling_realm
+    - title_template
+#  aggregation_facets:
+#    - project_id
+#    - downscaling_method_id
+#    - institute_id
+#    - variable_id
+#    - frequency
+#    - modeling_realm
 templates:
   title_template: "$project_id,$downscaling_method_id,$institute_id,$variable_id,$frequency,$modeling_realm"
   description_template: "This is a STAC item from the $project_id project, from the $institute_id institute, part of the $downscaling_method_id model and $variable_id variable"
