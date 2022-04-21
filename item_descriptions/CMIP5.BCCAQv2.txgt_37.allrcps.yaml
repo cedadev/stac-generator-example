@@ -1,5 +1,5 @@
 paths:
-  - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/BCCAQv2/txgt_37
+  - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final
 collections:
   id: test123
 facets:
@@ -7,7 +7,7 @@ facets:
     - name: regex
       description: "Extract facets from path using regex"
       inputs:
-        regex: 'https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/BCCAQv2/(?P<variable_id>\w+)/YS'
+        regex: 'https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final/(?P<dataset_name>\w+)/(?P<variable_id>\w+)'
     - name: header_extract
       inputs:
         attributes:
@@ -21,6 +21,7 @@ facets:
           - downscaling_method_id
           - driving_experiment
           - driving_model_id
+          - target_dataset_id
           - target_institute_id
   aggregation_facets:
     - title_template
