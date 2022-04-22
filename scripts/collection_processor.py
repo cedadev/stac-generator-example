@@ -17,6 +17,7 @@ import pystac
 import datetime
 from asset_scanner.core.utils import generate_id
 import yaml
+import sys
 
 
 class bcolors:
@@ -31,15 +32,13 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-class CollectionProcessor():
+class CollectionProcessor:
     """
     Create a STAC collection or update its summaries based on its queryables.
     """
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-        filepath = "collections.yaml"
+    def __init__(self):
+        filepath = sys.argv[1]
         collections = []
 
         with open(filepath) as file:
