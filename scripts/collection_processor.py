@@ -16,6 +16,7 @@ import os
 import pystac
 import datetime
 from asset_scanner.core.utils import generate_id
+import yaml
 
 
 class bcolors:
@@ -38,9 +39,22 @@ class CollectionProcessor():
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        stac_host = "http://127.0.0.1:8000/"
-        collection_description = "The WCRP Coupled Model Intercomparison Project, Phase 6 (CMIP6), was a global climate model intercomparison project, coordinated by PCMDI (Program For Climate Model Diagnosis and Intercomparison) on behalf of the World Climate Research Program (WCRP) and provided input for the Intergovernmental Panel on Climate Change (IPCC) 6th Assessment Report (AR6).The CMIP6 archive is managed via the Earth System Grid Federation, a globally distributed archive, with various gateways with advanced faceted search capabilities provided by a number of participating organisations. Full details are available from the PCMDI CMIP6 pages (see linked documentation on this record)."
-        collection_name = "CMIP6"
+        filepath = "collections.yaml"
+        collections = []
+
+        with open(filepath) as file:
+            document = yaml.full_load(file)
+
+            for item, val in document.items():
+                if item == "stac_host":
+                    stac_host = val
+                elif item == "collections":
+                    collections = val
+
+        for col in collections:
+            self.process_collection(stac_host, col["name"], col["description"])
+
+    def process_collection(self, stac_host, collection_name, collection_description):
         collection_id = generate_id(collection_name)
         stac_collection = self.get_stac_collection(stac_host, collection_id)
 
