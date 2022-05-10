@@ -1,7 +1,5 @@
 paths:
   - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/cccs_portal/indices/Final
-collections:
-  id: test123
 facets:
   extraction_methods:
     - name: regex
@@ -13,7 +11,6 @@ facets:
         attributes:
           - institute_id
           - conventions
-          - creation_date
           - frequency
           - product
           - modeling_realm
