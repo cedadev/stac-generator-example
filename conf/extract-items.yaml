@@ -20,8 +20,3 @@ outputs:
   - name: standard_out
 logging:
     level: INFO
-
-aggregator:
-    name: json_aggregator
-    inputs:
-        filepath: test.json
