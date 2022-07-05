@@ -2,30 +2,29 @@
     {
         "id": "cmip6",
         "body": {
-            "type": "Collection",
-            "license": "default",
-            "summaries": {
+            "type": "collection",
+            "properties": {
                 "mip_era": [
                     "CMIP6"
                 ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
                 "source_id": [
                     "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
                 ],
                 "var_id": [
                     "tas"
                 ],
                 "version": [
-                    "v20191210",
-                    "v20190502"
-                ],
-                "table_id": [
-                    "Amon"
-                ],
-                "institution_id": [
-                    "MOHC"
-                ],
-                "activity_id": [
-                    "CMIP"
+                    "v20190502",
+                    "v20191210"
                 ]
             }
         }
@@ -33,30 +32,29 @@
     {
         "id": "cmip6",
         "body": {
-            "type": "Collection",
-            "license": "default",
-            "summaries": {
+            "type": "collection",
+            "properties": {
                 "mip_era": [
                     "CMIP6"
                 ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
                 "source_id": [
                     "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
                 ],
                 "var_id": [
                     "tas"
                 ],
                 "version": [
-                    "v20191210",
-                    "v20190502"
-                ],
-                "table_id": [
-                    "Amon"
-                ],
-                "institution_id": [
-                    "MOHC"
-                ],
-                "activity_id": [
-                    "CMIP"
+                    "v20190502",
+                    "v20191210"
                 ]
             }
         }

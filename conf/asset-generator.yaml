@@ -1,21 +1,26 @@
-extractor: asset_generator.AssetExtractor
-item_descriptions:
-  root_directory: item_descriptions/
+generator: asset
+
+output_key: properties
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
 inputs:
   - name: intake_esm
     uri: https://raw.githubusercontent.com/cedadev/cmip6-object-store/master/catalogs/ceda-zarr-cmip6.json
     object_path_attr: zarr_path
     search_kwargs:
-        source_id: UKESM1-0-LL
-        activity_id: CMIP
-        experiment_id:
-            - historical
-            - ssp585-bgc
-        member_id:
-            - r4i1p1f2
-            - r12i1p1f2
-        table_id: Amon
-        variable_id: tas
+      source_id: UKESM1-0-LL
+      activity_id: CMIP
+      experiment_id:
+        - historical
+        - ssp585-bgc
+      member_id:
+        - r4i1p1f2
+        - r12i1p1f2
+      table_id: Amon
+      variable_id: tas
+
 outputs:
   - name: standard_out
     namespace: asset
@@ -25,5 +30,3 @@ outputs:
   - name: file_out
     namespace: header
     filepath: tests/file-io/assets.txt
-
-

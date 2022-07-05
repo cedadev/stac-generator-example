@@ -1,0 +1,15 @@
+generator: collection
+
+output_key: properties
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
+inputs:
+  - name: file_input
+    filepath: tests/file-io/items.txt
+
+outputs:
+  - name: standard_out
+  - name: json_out
+    filepath: tests/file-io/collections.json

@@ -24,4 +24,4 @@ jobs:
           sudo apt-get install libmagic1
       - name: Run PyTest
         run: |
-          pytest tests/test_asset_scanner.py
+          pytest tests/test_stac_generator.py

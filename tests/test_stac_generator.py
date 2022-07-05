@@ -1,8 +1,7 @@
 import json
 import os
 
-import pytest
-from asset_scanner.scripts import asset_scanner
+from stac_generator.scripts import stac_generator
 
 # debug purposes: switch to root directory if run as script
 cwd = os.getcwd()
@@ -15,32 +14,32 @@ for file in os.listdir(io_dir):
     os.remove(os.path.join(io_dir, file))
     
 # get the config files for the generators    
-extract_assets_conf = os.path.join('conf', 'extract-assets.yaml')
-extract_items_conf = os.path.join('conf', 'extract-items.yaml')
-extract_collections_conf = os.path.join('conf', 'extract-collections.yaml')
+asset_generator_conf = os.path.join('conf', 'extract-assets.yaml')
+item_generator_conf = os.path.join('conf', 'extract-items.yaml')
+collection_generator_conf = os.path.join('conf', 'extract-collections.yaml')
 
 
 
-def asset_scanner_extractor(config):
+def stac_generator_mime(config):
     """
-    Mimic the asset_scanner.script.asset_scanner module.
+    Mimic the stac_generator.script.stac_generator module.
 
     :param config: conf filepath arg
     """
-    conf = asset_scanner.load_config(config)
-    asset_scanner.setup_logging(conf)
+    conf = stac_generator.load_config(config)
+    stac_generator.setup_logging(conf)
 
-    extractor = asset_scanner.load_extractor(conf)
-    input_plugins = asset_scanner.load_plugins(conf, "asset_scanner.input_plugins", "inputs")
+    generator = stac_generator.load_generator(conf)
+    input_plugins = stac_generator.load_plugins(conf, "stac_generator.input_plugins", "inputs")
     for input in input_plugins:
-        input.run(extractor)
+        input.run(generator)
 
 
-def test_extract_assets():
+def test_generate_assets():
     """
-    Test if the extract has a non-empty properties
+    Test if the generator has a non-empty properties
     """
-    asset_scanner_extractor(extract_assets_conf)
+    stac_generator_mime(asset_generator_conf)
     output_dir = os.path.join('tests', 'file-io', 'assets.json')
 
     with open(output_dir, 'r+') as file:
@@ -49,11 +48,11 @@ def test_extract_assets():
     assert data[0]['body']['properties']
 
 
-def test_extract_items():
+def test_generate_items():
     """
-    Test if the extract has non-empty properties
+    Test if the generator has non-empty properties
     """
-    asset_scanner_extractor(extract_items_conf)
+    stac_generator_mime(item_generator_conf)
     output_dir = os.path.join('tests', 'file-io', 'items.json')
 
     with open(output_dir, 'r+') as file:
@@ -62,11 +61,11 @@ def test_extract_items():
     assert data[0]['body']['properties']
 
 
-def test_extract_collections():
+def test_generate_collections():
     """
     Test if the collections has non-empty summaries
     """
-    asset_scanner_extractor(extract_collections_conf)
+    stac_generator_mime(collection_generator_conf)
     output_dir = os.path.join('tests', 'file-io', 'collections.json')
 
     with open(output_dir, 'r+') as file:
@@ -79,7 +78,7 @@ def test_extract_collections():
 #     """
 #     Test the item_id and file_id are separate ids
 #     """
-#     asset_scanner_extractor(extract_items_conf)
+#     stac_generator_extractor(extract_items_conf)
 #     out, err = capsys.readouterr()
 #     output = out.split('\n')
 #     item = ast.literal_eval(output[0])

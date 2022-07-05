@@ -1,4 +1,4 @@
-* asset-scanner-example version:
+* stac-generator--example version:
 * Python version:
 * Operating System:
 

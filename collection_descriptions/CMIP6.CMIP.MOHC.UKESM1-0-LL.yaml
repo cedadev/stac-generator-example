@@ -1,0 +1,58 @@
+paths:
+  - https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL
+
+asset:
+  # The default asset id is a hash of the assets uri
+  extraction_methods:
+    # - method: posix_stats
+    - method: regex
+      description: "Extract facets from path using regex"
+      inputs:
+        regex: 'https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk\/(?P<mip_era>\w+)\.(?P<activity_id>\w+)\.(?P<institution_id>[\w-]+)\.(?P<source_id>[\w-]+)\/(?P<experiment_id>[\w-]+)\.(?P<member_id>\w+)\.(?P<table_id>\w+)\.(?P<var_id>\w+)\.(?P<grid_label>\w+)\.(?P<version>\w+)'
+
+item:
+  # The default item id is a hash of the collection id
+  id:
+    method: hash
+    inputs:
+      terms:
+        - mip_era
+        - activity_id
+        - institution_id
+        - source_id
+        - table_id
+        - var_id
+        - version
+  extraction_methods:
+    - method: json_file
+      inputs:
+        filepath: tests/file-io/assets.json
+        parent_id: item_id
+        terms:
+          - mip_era
+          - activity_id
+          - institution_id
+          - source_id
+          - table_id
+          - var_id
+          - version
+
+collection:
+  # The default collection id is "undefined"
+  id:
+    method: default
+    inputs:
+      value: cmip6
+  extraction_methods:
+    - method: json_file
+      inputs:
+        filepath: tests/file-io/items.json
+        parent_id: collection_id
+        terms:
+          - mip_era
+          - activity_id
+          - institution_id
+          - source_id
+          - table_id
+          - var_id
+          - version

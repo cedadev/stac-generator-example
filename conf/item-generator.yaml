@@ -1,14 +1,14 @@
-extractor: item_generator.FacetExtractor
-header_deduplication: true
-item_descriptions:
-    root_directory: item_descriptions/
-aggregator:
-    name: json_aggregator
-    inputs:
-        filepath: tests/file-io/assets.json
+generator: item
+
+output_key: properties
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
 inputs:
   - name: file_input
     filepath: tests/file-io/assets.txt
+
 outputs:
   - name: standard_out
     namespace: items
@@ -18,4 +18,3 @@ outputs:
   - name: file_out
     namespace: header
     filepath: tests/file-io/items.txt
-
