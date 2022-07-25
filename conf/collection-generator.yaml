@@ -1,7 +1,5 @@
 generator: collection
 
-output_key: properties
-
 collection_descriptions:
   root_directory: collection_descriptions/
 

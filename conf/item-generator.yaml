@@ -1,20 +1,15 @@
 generator: item
 
-output_key: properties
-
 collection_descriptions:
   root_directory: collection_descriptions/
 
 inputs:
-  - name: file_input
+  - name: text_file
     filepath: tests/file-io/assets.txt
 
 outputs:
   - name: standard_out
-    namespace: items
-  - name: json_out
-    namespace: items
+  - name: json_file
     filepath: tests/file-io/items.json
-  - name: file_out
-    namespace: header
+  - name: text_file
     filepath: tests/file-io/items.txt

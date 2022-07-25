@@ -23,10 +23,7 @@ inputs:
 
 outputs:
   - name: standard_out
-    namespace: asset
-  - name: json_out
-    namespace: asset
+  - name: json_file
     filepath: tests/file-io/assets.json
-  - name: file_out
-    namespace: header
+  - name: text_file
     filepath: tests/file-io/assets.txt

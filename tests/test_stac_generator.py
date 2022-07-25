@@ -5,19 +5,18 @@ from stac_generator.scripts import stac_generator
 
 # debug purposes: switch to root directory if run as script
 cwd = os.getcwd()
-if cwd.split('/')[-1] == 'tests':
-    os.chdir('..')
+if cwd.split("/")[-1] == "tests":
+    os.chdir("..")
 
 # delete all files in the test/file-io directory for fresh test instance
-io_dir = os.path.join('tests', 'file-io')
+io_dir = os.path.join("tests", "file-io")
 for file in os.listdir(io_dir):
     os.remove(os.path.join(io_dir, file))
-    
-# get the config files for the generators    
-asset_generator_conf = os.path.join('conf', 'extract-assets.yaml')
-item_generator_conf = os.path.join('conf', 'extract-items.yaml')
-collection_generator_conf = os.path.join('conf', 'extract-collections.yaml')
 
+# get the config files for the generators
+asset_generator_conf = os.path.join("conf", "asset-generator.yaml")
+item_generator_conf = os.path.join("conf", "item-generator.yaml")
+collection_generator_conf = os.path.join("conf", "collection-generator.yaml")
 
 
 def stac_generator_mime(config):
@@ -30,7 +29,7 @@ def stac_generator_mime(config):
     stac_generator.setup_logging(conf)
 
     generator = stac_generator.load_generator(conf)
-    input_plugins = stac_generator.load_plugins(conf, "stac_generator.input_plugins", "inputs")
+    input_plugins = stac_generator.load_plugins(conf, "stac_generator.inputs", "inputs")
     for input in input_plugins:
         input.run(generator)
 
@@ -40,12 +39,12 @@ def test_generate_assets():
     Test if the generator has a non-empty properties
     """
     stac_generator_mime(asset_generator_conf)
-    output_dir = os.path.join('tests', 'file-io', 'assets.json')
+    output_dir = os.path.join("tests", "file-io", "assets.json")
 
-    with open(output_dir, 'r+') as file:
+    with open(output_dir, "r+") as file:
         data = json.load(file)
 
-    assert data[0]['body']['properties']
+    assert data[0]["body"]["properties"]
 
 
 def test_generate_items():
@@ -53,12 +52,12 @@ def test_generate_items():
     Test if the generator has non-empty properties
     """
     stac_generator_mime(item_generator_conf)
-    output_dir = os.path.join('tests', 'file-io', 'items.json')
+    output_dir = os.path.join("tests", "file-io", "items.json")
 
-    with open(output_dir, 'r+') as file:
+    with open(output_dir, "r+") as file:
         data = json.load(file)
 
-    assert data[0]['body']['properties']
+    assert data[0]["body"]["properties"]
 
 
 def test_generate_collections():
@@ -66,12 +65,13 @@ def test_generate_collections():
     Test if the collections has non-empty summaries
     """
     stac_generator_mime(collection_generator_conf)
-    output_dir = os.path.join('tests', 'file-io', 'collections.json')
+    output_dir = os.path.join("tests", "file-io", "collections.json")
 
-    with open(output_dir, 'r+') as file:
+    with open(output_dir, "r+") as file:
         data = json.load(file)
 
-    assert data[0]['body']['summaries']
+    assert data[0]["body"]["properties"]
+
 
 # What was the reason for this test?
 # def test_id_generation(capsys):
