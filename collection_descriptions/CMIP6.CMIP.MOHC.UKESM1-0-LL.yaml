@@ -4,7 +4,7 @@ paths:
 asset:
   # The default asset id is a hash of the assets uri
   extraction_methods:
-    # - method: posix_stats
+    - method: object_store_stats
     - method: regex
       inputs:
         regex: 'https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk\/(?P<mip_era>\w+)\.(?P<activity_id>\w+)\.(?P<institution_id>[\w-]+)\.(?P<source_id>[\w-]+)\/(?P<experiment_id>[\w-]+)\.(?P<member_id>\w+)\.(?P<table_id>\w+)\.(?P<var_id>\w+)\.(?P<grid_label>\w+)\.(?P<version>\w+)'

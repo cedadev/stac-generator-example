@@ -1,9 +1,12 @@
 [
     {
-        "id": 273023318,
+        "id": -8098876055983061818,
         "body": {
             "type": "asset",
             "properties": {
+                "uri": "https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL/historical.r12i1p1f2.Amon.tas.gn.v20191210.zarr",
+                "filename": "historical.r12i1p1f2.Amon.tas.gn.v20191210.zarr",
+                "extension": ".zarr",
                 "mip_era": "CMIP6",
                 "activity_id": "CMIP",
                 "institution_id": "MOHC",
@@ -19,14 +22,17 @@
             "categories": [
                 "data"
             ],
-            "item_id": -1722267337545928032
+            "item_id": 3692427587745109605
         }
     },
     {
-        "id": 273023318,
+        "id": -6675337240403471882,
         "body": {
             "type": "asset",
             "properties": {
+                "uri": "https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL/historical.r4i1p1f2.Amon.tas.gn.v20190502.zarr",
+                "filename": "historical.r4i1p1f2.Amon.tas.gn.v20190502.zarr",
+                "extension": ".zarr",
                 "mip_era": "CMIP6",
                 "activity_id": "CMIP",
                 "institution_id": "MOHC",
@@ -42,7 +48,7 @@
             "categories": [
                 "data"
             ],
-            "item_id": -1722267337545928032
+            "item_id": -1834018938803637473
         }
     }
 ]

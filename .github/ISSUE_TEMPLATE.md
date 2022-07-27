@@ -1,4 +1,4 @@
-* stac-generator--example version:
+* stac-generator-example version:
 * Python version:
 * Operating System:
 
