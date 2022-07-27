@@ -1,6 +1,6 @@
 [
     {
-        "id": -8098876055983061818,
+        "id": "0b747f6213efc1b5cd404e7050ce2809",
         "body": {
             "type": "asset",
             "properties": {
@@ -22,11 +22,11 @@
             "categories": [
                 "data"
             ],
-            "item_id": 3692427587745109605
+            "item_id": "bdb3786db4ac649f17f62581a3e1d8c8"
         }
     },
     {
-        "id": -6675337240403471882,
+        "id": "4e6bfb98d29f4e4a98e2f20fceae6793",
         "body": {
             "type": "asset",
             "properties": {
@@ -48,7 +48,7 @@
             "categories": [
                 "data"
             ],
-            "item_id": -1834018938803637473
+            "item_id": "01bbcf63ad2badb3b46f1c7655c444dc"
         }
     }
 ]

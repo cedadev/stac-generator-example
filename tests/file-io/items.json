@@ -1,6 +1,6 @@
 [
     {
-        "id": -2820210965358092918,
+        "id": "bdb3786db4ac649f17f62581a3e1d8c8",
         "body": {
             "type": "item",
             "properties": {
@@ -28,11 +28,11 @@
                 "collection_id": "cmip6"
             },
             "collection_id": "cmip6",
-            "item_id": -2820210965358092918
+            "item_id": "bdb3786db4ac649f17f62581a3e1d8c8"
         }
     },
     {
-        "id": -305950670999976409,
+        "id": "01bbcf63ad2badb3b46f1c7655c444dc",
         "body": {
             "type": "item",
             "properties": {
@@ -60,7 +60,7 @@
                 "collection_id": "cmip6"
             },
             "collection_id": "cmip6",
-            "item_id": -305950670999976409
+            "item_id": "01bbcf63ad2badb3b46f1c7655c444dc"
         }
     }
 ]
