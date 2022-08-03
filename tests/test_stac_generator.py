@@ -9,9 +9,9 @@ if cwd.split("/")[-1] == "tests":
     os.chdir("..")
 
 # delete all files in the test/file-io directory for fresh test instance
-io_dir = os.path.join("tests", "file-io")
-for file in os.listdir(io_dir):
-    os.remove(os.path.join(io_dir, file))
+# io_dir = os.path.join("tests", "file-io")
+# for file in os.listdir(io_dir):
+#     os.remove(os.path.join(io_dir, file))
 
 # get the config files for the generators
 asset_generator_conf = os.path.join("conf", "asset-generator.yaml")

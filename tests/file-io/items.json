@@ -1,6 +1,6 @@
 [
     {
-        "id": "bdb3786db4ac649f17f62581a3e1d8c8",
+        "id": -1400154129057893843,
         "body": {
             "type": "item",
             "properties": {
@@ -28,11 +28,11 @@
                 "collection_id": "cmip6"
             },
             "collection_id": "cmip6",
-            "item_id": "bdb3786db4ac649f17f62581a3e1d8c8"
+            "item_id": -1400154129057893843
         }
     },
     {
-        "id": "01bbcf63ad2badb3b46f1c7655c444dc",
+        "id": 3607389492159601970,
         "body": {
             "type": "item",
             "properties": {
@@ -60,7 +60,199 @@
                 "collection_id": "cmip6"
             },
             "collection_id": "cmip6",
-            "item_id": "01bbcf63ad2badb3b46f1c7655c444dc"
+            "item_id": 3607389492159601970
+        }
+    },
+    {
+        "id": 7325896616565258492,
+        "body": {
+            "type": "item",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20191210"
+                ],
+                "collection_id": "cmip6"
+            },
+            "collection_id": "cmip6",
+            "item_id": 7325896616565258492
+        }
+    },
+    {
+        "id": 8980137603391620185,
+        "body": {
+            "type": "item",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20190502"
+                ],
+                "collection_id": "cmip6"
+            },
+            "collection_id": "cmip6",
+            "item_id": 8980137603391620185
+        }
+    },
+    {
+        "id": -4903044734908675007,
+        "body": {
+            "type": "item",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20191210"
+                ],
+                "collection_id": "cmip6"
+            },
+            "collection_id": "cmip6",
+            "item_id": -4903044734908675007
+        }
+    },
+    {
+        "id": -2864582997226025730,
+        "body": {
+            "type": "item",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20190502"
+                ],
+                "collection_id": "cmip6"
+            },
+            "collection_id": "cmip6",
+            "item_id": -2864582997226025730
+        }
+    },
+    {
+        "id": -2058353508830252410,
+        "body": {
+            "type": "item",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20191210"
+                ],
+                "collection_id": "cmip6"
+            },
+            "collection_id": "cmip6",
+            "item_id": -2058353508830252410
+        }
+    },
+    {
+        "id": -6768312570200129620,
+        "body": {
+            "type": "item",
+            "properties": {
+                "mip_era": [
+                    "CMIP6"
+                ],
+                "activity_id": [
+                    "CMIP"
+                ],
+                "institution_id": [
+                    "MOHC"
+                ],
+                "source_id": [
+                    "UKESM1-0-LL"
+                ],
+                "table_id": [
+                    "Amon"
+                ],
+                "var_id": [
+                    "tas"
+                ],
+                "version": [
+                    "v20190502"
+                ],
+                "collection_id": "cmip6"
+            },
+            "collection_id": "cmip6",
+            "item_id": -6768312570200129620
         }
     }
 ]

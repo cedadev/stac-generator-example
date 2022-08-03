@@ -1,6 +1,6 @@
 [
     {
-        "id": "0b747f6213efc1b5cd404e7050ce2809",
+        "id": -2274150038897853978,
         "body": {
             "type": "asset",
             "properties": {
@@ -22,11 +22,11 @@
             "categories": [
                 "data"
             ],
-            "item_id": "bdb3786db4ac649f17f62581a3e1d8c8"
+            "item_id": -7673524418517478973
         }
     },
     {
-        "id": "4e6bfb98d29f4e4a98e2f20fceae6793",
+        "id": -2646510788013265632,
         "body": {
             "type": "asset",
             "properties": {
@@ -48,7 +48,59 @@
             "categories": [
                 "data"
             ],
-            "item_id": "01bbcf63ad2badb3b46f1c7655c444dc"
+            "item_id": 8740426708292445641
+        }
+    },
+    {
+        "id": 2731557397945300166,
+        "body": {
+            "type": "asset",
+            "properties": {
+                "uri": "https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL/historical.r12i1p1f2.Amon.tas.gn.v20191210.zarr",
+                "filename": "historical.r12i1p1f2.Amon.tas.gn.v20191210.zarr",
+                "extension": ".zarr",
+                "mip_era": "CMIP6",
+                "activity_id": "CMIP",
+                "institution_id": "MOHC",
+                "source_id": "UKESM1-0-LL",
+                "experiment_id": "historical",
+                "member_id": "r12i1p1f2",
+                "table_id": "Amon",
+                "var_id": "tas",
+                "grid_label": "gn",
+                "version": "v20191210",
+                "collection_id": "cmip6"
+            },
+            "categories": [
+                "data"
+            ],
+            "item_id": -3862955043955914903
+        }
+    },
+    {
+        "id": 7797555212866959290,
+        "body": {
+            "type": "asset",
+            "properties": {
+                "uri": "https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL/historical.r4i1p1f2.Amon.tas.gn.v20190502.zarr",
+                "filename": "historical.r4i1p1f2.Amon.tas.gn.v20190502.zarr",
+                "extension": ".zarr",
+                "mip_era": "CMIP6",
+                "activity_id": "CMIP",
+                "institution_id": "MOHC",
+                "source_id": "UKESM1-0-LL",
+                "experiment_id": "historical",
+                "member_id": "r4i1p1f2",
+                "table_id": "Amon",
+                "var_id": "tas",
+                "grid_label": "gn",
+                "version": "v20190502",
+                "collection_id": "cmip6"
+            },
+            "categories": [
+                "data"
+            ],
+            "item_id": 3467731044739287438
         }
     }
 ]
