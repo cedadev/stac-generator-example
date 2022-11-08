@@ -1,17 +1,22 @@
-extractor: asset_generator.AssetExtractor
+generator: asset
+
 item_descriptions:
   root_directory: item_descriptions
+
 inputs:
   - name: thredds
     uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/disk2/cccs_portal/indices/Final/BCCAQv2_CMIP6/catalog.xml
     object_path_attr: access_urls.OPENDAP
+
 #outputs:
 #  - name: standard_out
+
 outputs:
   - name: stacapi
     connection:
       host: http://127.0.0.1/stac
     collection:
       name: CMIP6
+
 logging:
     level: INFO
