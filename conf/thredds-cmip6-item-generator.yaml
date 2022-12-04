@@ -1,0 +1,18 @@
+generator: item
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
+inputs:
+  - name: text_file
+    filepath: tests/file-io/cmip6-assets.txt
+
+outputs:
+  - name: standard_out
+  - name: json_file
+    filepath: tests/file-io/cmip6-items.json
+  - name: text_file
+    filepath: tests/file-io/cmip6-items.txt
+
+logging:
+    level: INFO
