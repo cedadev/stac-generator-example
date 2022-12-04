@@ -23,7 +23,7 @@ outputs:
     connection:
       host: http://127.0.0.1:8000
     collection:
-      name: CMIP6-new
+      name: CMIP6
 
 logging:
     level: INFO

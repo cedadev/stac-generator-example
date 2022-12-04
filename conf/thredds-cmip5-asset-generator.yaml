@@ -8,13 +8,12 @@ inputs:
     uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/disk2/cccs_portal/indices/Final/BCCAQv2/catalog.xml
     object_path_attr: access_urls.OPENDAP
 
-#outputs:
-#  - name: standard_out
-
+# directly populate STAC API
 outputs:
+  - name: standard_out
   - name: stacapi
     connection:
-      host: http://127.0.0.1/stac
+      host: http://127.0.0.1:8000
     collection:
       name: CMIP5
 

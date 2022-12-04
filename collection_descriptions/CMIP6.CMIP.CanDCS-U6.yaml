@@ -2,6 +2,27 @@ paths:
   - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/disk2/cccs_portal/indices/Final
 
 asset:
+  id:
+    method: hash
+    inputs:
+      terms:
+        # header extract
+        - institute_id
+        - conventions
+        - frequency
+        - product
+        - modeling_realm
+        - project_id
+        - downscaling_method_id
+        - driving_experiment
+        - driving_model_id
+        - target_dataset_id
+        - target_institute_id
+        # regex extract
+        - freq
+        - variable_id
+        - dataset_name
+        - scenario
   extraction_methods:
     - method: object_store_stats
     - method: regex
@@ -25,15 +46,6 @@ asset:
         backend: xarray
         backend_kwargs:
           decode_times: False
-  aggregation_facets:
-    - title_template
-#  aggregation_facets:
-#    - project_id
-#    - downscaling_method_id
-#    - institute_id
-#    - variable_id
-#    - frequency
-#    - modeling_realm
 
 item:
   id:
@@ -75,7 +87,7 @@ collection:
   id:
     method: default
     inputs:
-      value: CMIP6-new
+      value: CMIP6
   extraction_methods:
     - method: json_file
       inputs:
@@ -88,7 +100,3 @@ collection:
           - table_id
           - var_id
           - version
-
-templates:
-  title_template: "$project_id,$downscaling_method_id,$institute_id,$variable_id,$frequency,$modeling_realm"
-  description_template: "This is a STAC item from the $project_id project, from the $institute_id institute, part of the $downscaling_method_id model and $variable_id variable"
