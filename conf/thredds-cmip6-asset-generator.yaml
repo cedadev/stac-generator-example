@@ -1,0 +1,22 @@
+generator: asset
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
+inputs:
+  - name: thredds
+    uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/disk2/cccs_portal/indices/Final/BCCAQv2_CMIP6/catalog.xml
+    object_path_attr: access_urls.OPENDAP
+
+outputs:
+  - name: standard_out
+
+#outputs:
+#  - name: stacapi
+#    connection:
+#      host: http://127.0.0.1:8000
+#    collection:
+#      name: CMIP6-new
+
+logging:
+    level: INFO

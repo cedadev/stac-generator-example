@@ -1,0 +1,76 @@
+paths:
+  - https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/disk2/cccs_portal/indices/Final
+
+asset:
+  extraction_methods:
+    - method: object_store_stats
+    - method: regex
+      description: "Extract facets from path using regex"
+      inputs:
+        regex: 'https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/dodsC/birdhouse/disk2/cccs_portal/indices/Final/(?P<dataset_name>\w+)/(?P<variable_id>\w+)/(?P<freq>\w+)/(?P<scenario>\w+)'
+    - method: header
+      inputs:
+        attributes:
+          - institute_id
+          - conventions
+          - frequency
+          - product
+          - modeling_realm
+          - project_id
+          - downscaling_method_id
+          - driving_experiment
+          - driving_model_id
+          - target_dataset_id
+          - target_institute_id
+        backend: xarray
+        backend_kwargs:
+          decode_times: False
+  aggregation_facets:
+    - title_template
+#  aggregation_facets:
+#    - project_id
+#    - downscaling_method_id
+#    - institute_id
+#    - variable_id
+#    - frequency
+#    - modeling_realm
+
+item:
+  id:
+    method: hash
+    inputs:
+      terms:
+        - mip_era
+        - activity_id
+        - institution_id
+        - source_id
+        - table_id
+        - var_id
+        - version
+
+templates:
+  title_template: "$project_id,$downscaling_method_id,$institute_id,$variable_id,$frequency,$modeling_realm"
+  description_template: "This is a STAC item from the $project_id project, from the $institute_id institute, part of the $downscaling_method_id model and $variable_id variable"
+
+
+
+
+
+collection:
+  # The default collection id is "undefined"
+  id:
+    method: default
+    inputs:
+      value: CMIP6-new
+#  extraction_methods:
+#    - method: json_file
+#      inputs:
+#        filepath: tests/file-io/items.json
+#        terms:
+#          - mip_era
+#          - activity_id
+#          - institution_id
+#          - source_id
+#          - table_id
+#          - var_id
+#          - version
