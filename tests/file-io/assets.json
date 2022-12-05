@@ -102,57 +102,5 @@
             ],
             "item_id": 3467731044739287438
         }
-    },
-    {
-        "id": -3725753080105292444,
-        "body": {
-            "type": "asset",
-            "properties": {
-                "uri": "https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL/historical.r12i1p1f2.Amon.tas.gn.v20191210.zarr",
-                "filename": "historical.r12i1p1f2.Amon.tas.gn.v20191210.zarr",
-                "extension": ".zarr",
-                "mip_era": "CMIP6",
-                "activity_id": "CMIP",
-                "institution_id": "MOHC",
-                "source_id": "UKESM1-0-LL",
-                "experiment_id": "historical",
-                "member_id": "r12i1p1f2",
-                "table_id": "Amon",
-                "var_id": "tas",
-                "grid_label": "gn",
-                "version": "v20191210",
-                "collection_id": "cmip6"
-            },
-            "categories": [
-                "data"
-            ],
-            "item_id": 958033021912530774
-        }
-    },
-    {
-        "id": -3751154370766550981,
-        "body": {
-            "type": "asset",
-            "properties": {
-                "uri": "https://cmip6-zarr-o.s3-ext.jc.rl.ac.uk/CMIP6.CMIP.MOHC.UKESM1-0-LL/historical.r4i1p1f2.Amon.tas.gn.v20190502.zarr",
-                "filename": "historical.r4i1p1f2.Amon.tas.gn.v20190502.zarr",
-                "extension": ".zarr",
-                "mip_era": "CMIP6",
-                "activity_id": "CMIP",
-                "institution_id": "MOHC",
-                "source_id": "UKESM1-0-LL",
-                "experiment_id": "historical",
-                "member_id": "r4i1p1f2",
-                "table_id": "Amon",
-                "var_id": "tas",
-                "grid_label": "gn",
-                "version": "v20190502",
-                "collection_id": "cmip6"
-            },
-            "categories": [
-                "data"
-            ],
-            "item_id": -3678206612209380834
-        }
     }
 ]
