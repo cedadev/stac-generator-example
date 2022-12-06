@@ -47,56 +47,57 @@ asset:
         backend_kwargs:
           decode_times: False
 
-item:
-  id:
-    method: hash
-    inputs:
-      terms:
-        - mip_era
-        - activity_id
-        - institution_id
-        - source_id
-        - table_id
-        - var_id
-        - version
-  extraction_methods:
-    - method: json_file
-      inputs:
-        filepath: tests/file-io/cmip6-assets.json
-        terms:
-          # header extract
-          - institute_id
-          - conventions
-          - frequency
-          - product
-          - modeling_realm
-          - project_id
-          - downscaling_method_id
-          - driving_experiment
-          - driving_model_id
-          - target_dataset_id
-          - target_institute_id
-          # regex extract
-          - freq
-          - variable_id
-          - dataset_name
-          - scenario
-
 collection:
-  # The default collection id is "undefined"
   id:
     method: default
     inputs:
       value: CMIP6
-  extraction_methods:
-    - method: json_file
-      inputs:
-        filepath: tests/file-io/cmip6-items.json
-        terms:
-          - mip_era
-          - activity_id
-          - institution_id
-          - source_id
-          - table_id
-          - var_id
-          - version
+#  # Only declare if `collection` generator is used
+#  extraction_methods:
+#    - method: json_file
+#      inputs:
+#        filepath: tests/file-io/cmip6-items.json
+#        terms:
+#          - mip_era
+#          - activity_id
+#          - institution_id
+#          - source_id
+#          - table_id
+#          - var_id
+#          - version
+
+## Only declare if `item` generator is used
+#item:
+#  id:
+#    method: hash
+#    inputs:
+#      terms:
+#        - mip_era
+#        - activity_id
+#        - institution_id
+#        - source_id
+#        - table_id
+#        - var_id
+#        - version
+#  extraction_methods:
+#    - method: json_file
+#      inputs:
+#        filepath: tests/file-io/cmip6-assets.json
+#        terms:
+#          # header extract
+#          - institute_id
+#          - conventions
+#          - frequency
+#          - product
+#          - modeling_realm
+#          - project_id
+#          - downscaling_method_id
+#          - driving_experiment
+#          - driving_model_id
+#          - target_dataset_id
+#          - target_institute_id
+#          # regex extract
+#          - freq
+#          - variable_id
+#          - dataset_name
+#          - scenario
