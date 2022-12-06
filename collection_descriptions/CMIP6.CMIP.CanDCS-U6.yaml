@@ -46,6 +46,11 @@ asset:
         backend: xarray
         backend_kwargs:
           decode_times: False
+      post_processors:
+        - method: facet_map
+          inputs:
+            term_map:
+              product: product_name
 
 collection:
   id:
