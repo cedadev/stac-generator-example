@@ -16,6 +16,10 @@ outputs:
       host: http://127.0.0.1:8000
     collection:
       name: CMIP5
+    drop_properties:
+      - uri
+      - extension
+      - filename
 
 logging:
     level: INFO
