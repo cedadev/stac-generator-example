@@ -1,0 +1,25 @@
+generator: asset
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
+inputs:
+  - name: thredds
+    uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/disk2/cccs_portal/indices/Final/BCCAQv2/catalog.xml
+    object_path_attr: access_urls.OPENDAP
+
+# directly populate STAC API
+outputs:
+  - name: standard_out
+  - name: stacapi
+    connection:
+      host: http://127.0.0.1:8000
+    collection:
+      name: CMIP5
+    drop_properties:
+      - uri
+      - extension
+      - filename
+
+logging:
+    level: INFO

@@ -1,0 +1,33 @@
+generator: asset
+
+collection_descriptions:
+  root_directory: collection_descriptions/
+
+inputs:
+  - name: thredds
+    uri: https://pavics.ouranos.ca/twitcher/ows/proxy/thredds/catalog/birdhouse/disk2/cccs_portal/indices/Final/BCCAQv2_CMIP6/catalog.xml
+    object_path_attr: access_urls.OPENDAP
+
+# Output option #1: directly populate STAC API
+outputs:
+  - name: standard_out
+  - name: stacapi
+    connection:
+      host: http://127.0.0.1:8000
+    collection:
+      name: CMIP6
+    drop_properties:
+      - uri
+      - extension
+      - filename
+
+## Output option #2: locally cache assets, then use 'item' and 'collection' generators
+#outputs:
+#  - name: standard_out
+#  - name: json_file
+#    filepath: tests/file-io/cmip6-assets.json
+#  - name: text_file
+#    filepath: tests/file-io/cmip6-assets.txt
+
+logging:
+    level: INFO
